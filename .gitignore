@@ -1,3 +1,6 @@
+# Build files
+out
 .dhow
-build
+
+# Dependencies
 node_modules
