@@ -4,13 +4,14 @@
     "description": "",
     "main": "index.js",
     "scripts": {
-        "dev": "dhow dev -i src/pages",
+        "dev": "DEBUG=dhow:jsx dhow dev -i src/pages --disable-cache",
         "build": "dhow build -i src/pages"
     },
     "keywords": [],
     "author": "",
     "license": "MIT",
     "dependencies": {
+        "@tailwindcss/typography": "^0.4.0",
         "autoprefixer": "^10.2.5",
         "dhow": "^3.0.2",
         "gray-matter": "^4.0.2",

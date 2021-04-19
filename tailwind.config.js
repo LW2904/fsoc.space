@@ -5,8 +5,12 @@ module.exports = {
         removeDeprecatedGapUtilities: true,
         purgeLayersByDefault: true,
     },
+
+    mode: 'jit',
+
     purge: [
-        './src/**/*.html',
+        './public/**/*.html',
+        './src/**/*.js',
     ],
     darkMode: 'class',
     theme: {
@@ -24,4 +28,7 @@ module.exports = {
         }
     },
     variants: {},
+    plugins: [
+        require('@tailwindcss/typography'),
+    ]
 };

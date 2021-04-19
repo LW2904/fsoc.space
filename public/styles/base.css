@@ -1,0 +1,21 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+    body {
+        /* Set up the default font */
+        font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    
+        /* Make sure that the body takes up at least the whole screen, vertically */
+        min-height: 100vh;
+
+        /* Allow for nice header-contnet-footer spacing even when content is <100vh */
+        display: flex;
+        flex-direction: column;
+    }
+
+    div.custom-container {
+        @apply px-3 mx-auto w-full max-w-full sm:max-w-md md:max-w-md lg:max-w-lg xl:max-w-xl;
+    }
+}

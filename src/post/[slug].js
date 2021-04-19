@@ -21,9 +21,11 @@ export const getPaths = async () => {
 export const getProps = async (slug) => {
     const parsedPost = parseFrontMatter(
         await readFile(path.join(contentDirectory, `${slug}.md`), 'utf-8')
-    )
+    );
 
-    return { post }
+    parsedPost.content = marked(parsedPost.content);
+
+    return post;
 }
 
 export default Post
