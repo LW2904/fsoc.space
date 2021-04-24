@@ -1,8 +1,8 @@
---
+---
 title: Terminal Control Codes in C
 date: 2018-07-26
 description: Using terminal control codes to move the cursor and to draw on the terminal, all from native C code.
---
+---
 
 _Note that basically nothing in this guide is exclusive to the programming language C, anything that can print to a terminal supporting these sequences will work._
 

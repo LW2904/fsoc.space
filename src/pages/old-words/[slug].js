@@ -3,17 +3,21 @@ import marked from 'marked';
 import parseFrontMatter from 'gray-matter';
 import { readdir, readFile } from 'fs/promises';
 
-import { Container } from '../../components/utils';
+import { Container, Date } from '../../components/utils';
 
-const Post = ({ name, date, description, content }) => (<>
-    <Container className={'prose mb-3'}>
-        <span>{date}</span>
-
-        <h1 className={'font-serif'}>
-            {name}
+const Post = ({ title, date, description, content }) => (<>
+    <Container>
+        <h1 className={'font-serif text-3xl'}>
+            {title}
         </h1>
 
-        <h3 className={'!font-normal !text-gray-700 font-serif'}>
+        <small className={'text-sm font-sans text-gray-700'}>
+            <Date date={date} />
+        </small>
+    </Container>
+
+    <Container className={'prose mb-3'}>
+        <h3 className={'!font-normal font-serif'}>
             {description}
         </h3>
 
@@ -24,10 +28,10 @@ const Post = ({ name, date, description, content }) => (<>
 const contentDirectory = 'posts'
 
 export const getPaths = async () => {
-    const parsedFilePaths = (await readdir(contentDirectory))
-        .map((p) => path.parse(p));
-
-    return parsedFilePaths.map((p) => path.join(p.dir, p.name));
+    const paths = (await readdir(contentDirectory))
+        .map((p) => path.parse(p).name);
+    
+    return paths;
 };
 
 export const getProps = async (slug) => {

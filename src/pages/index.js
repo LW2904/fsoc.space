@@ -1,29 +1,21 @@
-import { Head } from 'dhow'
+const Home = () => {
+    return (<>
+        <div className={'h-screen w-full flex flex-col justify-center items-center px-4'}>
+            <div className={'flex flex-col items-center ty'}>
+                <img src={'/assets/logo.svg'} alt={'fsoc'} />
 
-import { Container } from '../components/utils'
+                <nav className={'w-full flex flex-row justify-between ty'}>
+                    <a href={'/about'}>/about</a> <a href={'/projects'}>/projects</a> <a href={'/words'}>/words</a> <a href={'/files'}>/files</a>
+                </nav>
 
-const Home = () => (<>
-    <Head>
-        <title>fsoc.space</title>
-    </Head>
-
-    <Container className={'prose'}>
-        <h1 className={'text-xl font-normal font-serif'}>
-            Hey there, I'm fsoc.
-        </h1>
-
-        <p>
-            My name is Laurenz Weixlbaumer. I'm an Austrian software developer and currently a freelancer: 
-            I build things, usually by writing things. Sometimes I write <a href={'/words'}>words</a> about 
-            the process (and other things).
-        </p>
-
-        <p>
-            You can contact me by email via <code>root@ this domain</code>. I'm also on <a href={'https://github.com/fs-c/'}>github/fs-c</a> and <a href={'https://gitlab.com/fsoc'}>gitlab/fsoc</a>. 
-            Sometimes I play games on <a href={'http://steamcommunity.com/profiles/76561198091491690'}>steam/f50c</a>.
-        </p>
-    </Container>
-
-</>);
+                <p className={'mt-2'}>
+                    Hey there, I'm Laurenz Weixlbaumer, although I usually go 
+                    by <code>fsoc</code> online. I'm a software developer living in 
+                    Austria and currently a freelancer.
+                </p>
+            </div>
+        </div>
+    </>);
+};
 
 export default Home;

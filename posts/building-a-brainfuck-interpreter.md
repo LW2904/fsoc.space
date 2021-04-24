@@ -1,5 +1,5 @@
 ---
-name: Building a Brainfuck Interpreter
+title: Building a Brainfuck Interpreter
 date: 2018-06-14
 description: A look inside a basic C99 implementation of an interpreter for the esoteric programming language brainfuck, created in 1993.
 ---

@@ -4,6 +4,9 @@ const Document = () => (<>
             <meta charset={'utf-8'} />
             <meta name={'viewport'} content={'width=device-width, initial-scale=1'} />
 
+            <meta name={'author'} content={'fsoc'} />
+            <meta name={'author'} content={'Laurenz Weixlbaumer'} />
+
             <link href={'/styles/base.css'} rel={'stylesheet'}></link>
         </head>
 

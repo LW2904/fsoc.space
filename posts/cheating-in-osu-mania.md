@@ -17,7 +17,7 @@ By parsing hits from the `.osu` file we avoid having to do too much memory readi
 
 It should be noted that I will be using APIs that are specific to Linux and the X Window System in order to read the little memory we have to, and to simulate keypresses. The parts that require this are easily replaceable with close Windows equivalents, and no changes to the main program logic are required.
 
-### Parsing the beatmap
+## Parsing the beatmap
 
 Information about beatmaps is stored in plaintext in `.osu` files, and the format is [well documented](https://osu.ppy.sh/help/wiki/osu!_File_Formats/Osu_(file_format)). These files contain many sections, of which only the last `[HitObjects]` section is relevant to us.
 
@@ -86,7 +86,7 @@ The default key layout in osu!mania is `'d'` for the first column, `'f'` for the
 
 I’m not going to go into map parsing any further than this since in the end it’s really just splitting up and parsing lines, but you can take a look at the code in [beatmap.c](https://github.com/LW2904/maniac/blob/master/src/beatmap.c) where it’s fully implemented.
 
-### Finding the gametime
+## Finding the gametime
 
 All time points in .osu files are defined as ‘miliseconds from the beginning of the song’, so it’s crucial that we be able to read the current songs playback time (from now on referred to as ‘gametime’) from the osu! process in order to be able to accurately replay them.
 
@@ -112,7 +112,7 @@ A lot of these can be discarded immediately, and the addresses with potential ca
 
 I’m not going to implement pattern scanning here since it is not required on Linux and I feel like it would go too far beyond the scope of this post, reference implementations can be found all over the web though. To get the surrounding memory for a signature simply use the `dump` command.
 
-### Reading the gametime
+## Reading the gametime
 
 Now, having found the address we want to read from, we can simply use the [`process_vm_readv`](http://man7.org/linux/man-pages/man2/process_vm_readv.2.html) function introduced in recent Linux Kernel versions (>= 3.2). I want to encourage you to read the manpage on it, although its interface should be obvious from the example code below.
 
@@ -141,7 +141,7 @@ int32_t get_gametime(pid_t pid)
 }
 ```
 
-### Implementation
+## Implementation
 
 Before jumping into the meat of the matter, let’s think about user input for a second. We will need to a path to the beatmap file to parse, and the process ID of the osu! process. This can be implemented in a clean way with the [`getopt`](https://www.gnu.org/software/libc/manual/html_node/Using-Getopt.html#Using-Getopt) function, a GNU extension to the C standard.
 
