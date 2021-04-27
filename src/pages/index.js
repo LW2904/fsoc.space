@@ -3,14 +3,16 @@ const Home = () => {
         <div className={'flex flex-col items-center prose container'}>
             <img src={'/assets/logo.svg'} alt={'fsoc'} />
 
-            <nav className={'w-full flex flex-row justify-between mb-2'}>
-                <a href={'/about'}>/about</a> <a href={'/projects'}>/projects</a> <a href={'/words'}>/words</a> <a href={'/files'}>/files</a>
+            <nav className={'w-full flex flex-row justify-between gap-2 mb-2'}>
+                <a href={'/about'}>/about</a> 
+                <a href={'/projects'}>/projects</a> 
+                <a href={'/words'}>/words</a> 
+                <a href={'/files'}>/files</a>
             </nav>
 
             <p>
-                Hey there, I'm Laurenz Weixlbaumer, although I usually go 
-                by <code>fsoc</code> online. I'm a software developer living in 
-                Austria and currently a freelancer.
+                Hey there, I'm Laurenz Weixlbaumer, although I mainly go 
+                by <code>fsoc</code> online. I build things, usually by writing things.
             </p>
 
             <p>
@@ -25,6 +27,7 @@ export default Home;
 
 export const getProps = () => {
     return {
+        showHeader: false,
         wrapperClassName: 'w-full flex flex-col justify-center items-center',
     };
 }
