@@ -11,8 +11,8 @@ const Home = () => {
             </nav>
 
             <p>
-                Hey there, I'm Laurenz Weixlbaumer, although I mainly go 
-                by <code>fsoc</code> online. I build things, usually by writing things.
+                Hi, I'm Laurenz Weixlbaumer, a software developer living in Austria. Online, 
+                I mainly go by <code>fsoc</code>. I build things, usually by writing things.
             </p>
 
             <p>

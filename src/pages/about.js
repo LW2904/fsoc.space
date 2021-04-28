@@ -1,7 +1,7 @@
 const Page = () => (<>
     <div className={'container prose'}>
         <p>
-            I'm a software developer living in Austria.
+            As mentioned before, I'm a software developer living in Austria.
         </p>
 
         <p>
