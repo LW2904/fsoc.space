@@ -1,4 +1,4 @@
 [submodule "files"]
-	path = files
+	path = public/files
 	url = https://github.com/fs-c/files
 	branch = archive
