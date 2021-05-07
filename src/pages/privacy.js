@@ -5,8 +5,8 @@ const Page = () => (<>
         </p>
 
         <p>
-            <i>When you visit this site, I do not collect, process or otherwise handle any 
-            personal data.</i> This site runs on servers provided by GitHub, Inc. via 
+            <i>I do not collect, process or otherwise handle any personal data of site visitors.</i> This 
+            site runs on servers provided by GitHub, Inc. via 
             their <a href={'https://pages.github.com/'}>GitHub Pages</a> service. For information 
             on the data which GitHub, Inc. collects, see 
             their <a href={'https://docs.github.com/en/github/site-policy/github-privacy-statement'}>Privacy Statement</a> (accessed 2021-04-24).
