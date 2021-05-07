@@ -1,5 +1,5 @@
 const Header = () => (<>
-    <header className={'container flex flex-col items-center border-b border-gray-300 my-2 pb-2'}>
+    <header className={'container flex flex-col items-center border-b border-gray-300 mt-2 mb-4 pb-2'}>
         <a href={'/'} className={'italic font-mono font-bold'}>
             fsoc
         </a>
